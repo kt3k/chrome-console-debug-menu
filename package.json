@@ -1,0 +1,24 @@
+{
+  "name": "chrome-console-debug-menu",
+  "version": "0.1.0",
+  "description": "A machanism to define and document debug menu for chrome console panel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt3k/chrome-console-debug-menu.git"
+  },
+  "keywords": [
+    "chrome",
+    "devtools",
+    "customFormatter"
+  ],
+  "author": "Yoshiya Hinosawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kt3k/chrome-console-debug-menu/issues"
+  },
+  "homepage": "https://github.com/kt3k/chrome-console-debug-menu#readme"
+}
