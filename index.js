@@ -32,6 +32,12 @@ const remove = (array, item) => {
   array.splice(array.indexOf(item), 1)
 }
 
+const SPECIAL_KEYS = [
+  'desc',
+  'description',
+  'methods'
+]
+
 class Menu {
   constructor () {
     this.menus = []
@@ -44,7 +50,7 @@ class Menu {
   static initFormatter () {
     window.devtoolsFormatters = window.devtoolsFormatters || []
     if (!window.devtoolsFormatters.includes(menuFormatter)) {
-      window.devtoolsFormatters.push(new MenuFormatter())
+      window.devtoolsFormatters.push(menuFormatter)
     }
   }
 
@@ -75,8 +81,9 @@ class Menu {
 
   static getSubmenuKeys (obj) {
     const keys = Object.keys(obj)
-    remove(keys, 'description')
-    remove(keys, 'methods')
+
+    SPECIAL_KEYS.forEach(key => { remove(keys, key) })
+
     return keys
   }
 
@@ -143,18 +150,16 @@ const resetLocalStorage = ({ message, localStorage }) => {
 
   window.localStorage.clear()
 
-  Object.keys(data).forEach(key => {
-    let value = data[key]
+  Object.keys(localStorage).forEach(key => {
+    const value = localStorage[key]
 
     if (typeof value === 'string') {
-      // does nothing
+      window.localStorage.setItem(key, value)
     } else if (typeof value === 'object') {
-      value = JSON.stringify(value)
+      window.localStorage.setItem(key, JSON.stringify(value))
     } else {
       throw new Error(`invalid value type: ${typeof value}`)
     }
-
-    window.localStorage.setItem(key, value)
   })
 
   return window.localStorage
@@ -162,3 +167,4 @@ const resetLocalStorage = ({ message, localStorage }) => {
 
 module.exports = Menu
 module.exports.resetLocalStorage = resetLocalStorage
+module.exports.MenuFormatter = MenuFormatter

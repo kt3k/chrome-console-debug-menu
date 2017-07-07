@@ -4,7 +4,8 @@
   "description": "A machanism to define and document debug menu for chrome console panel.",
   "main": "index.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/kt3k/chrome-console-debug-menu/issues"
   },
-  "homepage": "https://github.com/kt3k/chrome-console-debug-menu#readme"
+  "homepage": "https://github.com/kt3k/chrome-console-debug-menu#readme",
+  "devDependencies": {
+    "babel-plugin-istanbul": "^4.1.4",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "chai": "^4.0.2",
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.4.2",
+    "standard": "^10.0.2"
+  }
 }
