@@ -1,5 +1,8 @@
 # chrome-console-debug-menu v1.0.0
 
+[![CircleCI](https://circleci.com/gh/kt3k/chrome-console-debug-menu.svg?style=svg)](https://circleci.com/gh/kt3k/chrome-console-debug-menu)
+[![codecov](https://codecov.io/gh/kt3k/chrome-console-debug-menu/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/chrome-console-debug-menu)
+
 > A machanism to define and document debug menu for chrome console panel.
 
 # Usage
