@@ -146,7 +146,7 @@ class Menu {
  */
 const resetLocalStorage = ({ message, localStorage }) => {
   localStorage = localStorage || {}
-  console.log(`%c ${message}`, 'color: red;')
+  console.log(`%c ${message}`, 'color: indianred;')
 
   window.localStorage.clear()
 

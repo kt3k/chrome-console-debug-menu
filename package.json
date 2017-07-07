@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start",
     "lint": "standard",
-    "codecov": "npm run test && codecov"
+    "codecov": "npm run test && codecov",
+    "update-example": "browserify example.js > example-bundle.js"
   },
   "repository": {
     "type": "git",

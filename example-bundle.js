@@ -8,16 +8,13 @@ window.m = Menu.create('m', {
       clear: {
         description: 'Clear localStorage',
         func () {
-          console.log('Clearing localStorage')
-          localStorage.clear()
+          Menu.resetLocalStorage({ message: 'Clearing localStorage' })
         }
       },
       typical: {
         description: 'Sets localStorage in a typical state',
         func () {
-          console.log('Setting localStorage in a typical state')
-          localStorage.clear()
-          localStorage.setItem('foo', 'bar')
+          Menu.resetLocalStorage({ message: 'Setting localStorage in a typical state', localStorage: { foo: 'bar' } })
         }
       }
     }
@@ -173,7 +170,7 @@ class Menu {
  */
 const resetLocalStorage = ({ message, localStorage }) => {
   localStorage = localStorage || {}
-  console.log(`%c ${message}`, 'color: red;')
+  console.log(`%c ${message}`, 'color: indianred;')
 
   window.localStorage.clear()
 
