@@ -1,4 +1,4 @@
-# chrome-console-debug-menu v0.1.0
+# chrome-console-debug-menu v1.0.0
 
 > A machanism to define and document debug menu for chrome console panel.
 
