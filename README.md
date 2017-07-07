@@ -44,7 +44,7 @@ Then turn on "Enable custom formatters" option in "Console" section of settings 
 
 Then bundle and load the above script in browser and then open devtools console and you'll get object tree `m` like the below:
 
-:screenshot:
+<img src="https://kt3k.github.io/chrome-console-debug-menu/ss.png" />
 
 - You can see submenus under `m` by hitting `m`.
 - You can see methods under `m.ls` by hitting `m.ls`
