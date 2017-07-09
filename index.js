@@ -165,6 +165,33 @@ const resetLocalStorage = ({ message, localStorage }) => {
   return window.localStorage
 }
 
+const serializeLocalStorage = (message) => {
+  const obj = {}
+
+  Object.keys(localStorage).forEach(key => {
+    const value = localStorage.getItem(key)
+    obj[key] = parseIfPossible(value)
+  })
+
+  return JSON.stringify({
+    message,
+    localStorage: obj
+  }, null, 2)
+}
+
+/**
+ * Tries parse the value as JSON and returns parsed object if parsed, return the value itself if not parsed.
+ * @param {string} value The value to parse
+ */
+const parseIfPossible = value => {
+  try {
+    return JSON.parse(value)
+  } catch (e) {
+    return value
+  }
+}
+
 module.exports = Menu
 module.exports.resetLocalStorage = resetLocalStorage
+module.exports.serializeLocalStorage = serializeLocalStorage
 module.exports.MenuFormatter = MenuFormatter

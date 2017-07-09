@@ -73,6 +73,12 @@ Creates menu object from the given object. See the example above for the usage.
 
 Sets the localStorage by the given object, showing the given message.
 
+## menu.serializeLocalStorage(message)
+
+- @param {string} message The message to append to serialized data
+
+Serializes the current localStorage data with the given message.
+
 # License
 
 MIT
