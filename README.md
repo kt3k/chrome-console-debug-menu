@@ -1,4 +1,4 @@
-# chrome-console-debug-menu v1.0.1
+# chrome-console-debug-menu v1.1.0
 
 [![CircleCI](https://circleci.com/gh/kt3k/chrome-console-debug-menu.svg?style=svg)](https://circleci.com/gh/kt3k/chrome-console-debug-menu)
 [![codecov](https://codecov.io/gh/kt3k/chrome-console-debug-menu/branch/master/graph/badge.svg)](https://codecov.io/gh/kt3k/chrome-console-debug-menu)
