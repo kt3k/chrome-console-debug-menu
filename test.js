@@ -10,7 +10,7 @@ describe('create', () => {
         methods: {
           hello: {
             desc: 'Says hello',
-            func () { console.log('hello') }
+            func () { return 'hello' }
           }
         }
       },
@@ -19,7 +19,7 @@ describe('create', () => {
         methods: {
           clear: {
             description: 'Clears localStorage',
-            func () { localStorage.clear() }
+            func () { return 'clearing localStorage' }
           }
         }
       }
@@ -30,7 +30,9 @@ describe('create', () => {
     expect(m.ls).to.be.an('object')
     expect(m.message()).to.be.a('string')
     expect(m.hello.message()).to.be.a('string')
+    expect(m.hello.hello).to.equal('hello')
     expect(m.ls.message()).to.be.a('string')
+    expect(m.ls.clear).to.equal('clearing localStorage')
   })
 })
 

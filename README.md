@@ -48,8 +48,8 @@ Then bundle and load the above script in browser and then open devtools console 
 
 - You can see submenus under `m` by hitting `m`.
 - You can see methods under `m.ls` by hitting `m.ls`
-- You can invoke localStorage's `clear` task by hitting `m.ls.clear()`
-- You can invoke localStorage's `typical` task by hitting `m.ls.typical()`
+- You can invoke localStorage's `clear` task by hitting `m.ls.clear`
+- You can invoke localStorage's `typical` task by hitting `m.ls.typical`
 
 Likewise, you can define arbitrary menus under this object tree.
 

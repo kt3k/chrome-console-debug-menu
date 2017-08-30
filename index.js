@@ -103,7 +103,7 @@ class Menu {
    */
   addMethod (name, method, description) {
     this.methods.push({ name: name, description })
-    this[name] = method
+    Object.defineProperty(this, name, { get: method })
   }
 
   reference () {
