@@ -130,7 +130,7 @@ class Menu {
     }
 
     return 'methods\n' + this.methods.map(method =>
-      `  ${this.reference()}.${method.name}() - ${method.description}`
+      `  ${this.reference()}.${method.name} - ${method.description}`
     ).join('\n') + '\n'
   }
 
